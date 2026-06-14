@@ -40,7 +40,7 @@ export default function AboutSection() {
 
       {/* Sticker — makhana, flips in from left on scroll */}
       <ScrollFlipSticker
-        src="/sticker_makhana.png"
+        src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/sticker_makhana.png"
         alt="makhana sticker"
         size={240}
         position={{ top: '10%', right: '42rem' }}

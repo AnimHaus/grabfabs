@@ -19,7 +19,7 @@ export default function CTASection() {
     <section ref={ref} className="py-20 md:py-28 bg-cream px-6 md:px-12 relative overflow-hidden">
       {/* Sticker — bar */}
       <ScrollFlipSticker
-        src="/sticker_bar.png"
+        src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/sticker_bar.png"
         alt="bar sticker"
         size={240}
         position={{ top: '30%', left: '10rem', transform: 'translateY(-50%)' }}
@@ -29,7 +29,7 @@ export default function CTASection() {
       />
       {/* Sticker — loaves */}
       <ScrollFlipSticker
-        src="/sticker_loaves.png"
+        src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/sticker_loaves.png"
         alt="loaves sticker"
         size={240}
         position={{ top: '50%', right: '10rem', transform: 'translateY(-50%)' }}

@@ -55,7 +55,7 @@ export default function HustlerSection() {
     <section id="hustlers" className="py-28 md:py-36 bg-cream-dark overflow-hidden relative">
       {/* Sticker — peanut butter */}
       <ScrollFlipSticker
-        src="/sticker_peanut_butter.png"
+        src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/sticker_peanut_butter.png"
         alt="peanut butter sticker"
         size={240}
         position={{ top: '10%', right: '7.5rem' }}
@@ -65,7 +65,7 @@ export default function HustlerSection() {
       />
       {/* Sticker — snowballs */}
       <ScrollFlipSticker
-        src="/sticker_snowballs.png"
+        src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/sticker_snowballs.png"
         alt="snowballs sticker"
         size={240}
         position={{ bottom: '4%', left: '1rem' }}

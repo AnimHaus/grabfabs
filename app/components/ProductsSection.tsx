@@ -156,7 +156,7 @@ export default function ProductsSection() {
     <section id="products" className="py-28 md:py-36 bg-cream relative overflow-hidden">
       {/* Sticker — muesli, flips in from top-right on X axis */}
       <ScrollFlipSticker
-        src="/sticker_museli.png"
+        src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/sticker_museli.png"
         alt="museli sticker"
         size={240}
         position={{ top: '8%', right: '7.5rem' }}

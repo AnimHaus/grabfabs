@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <Image
-                src="/alter_logo.png"
+                src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/alter_logo.png"
                 alt="Grabfabs"
                 width={250}
                 height={120}

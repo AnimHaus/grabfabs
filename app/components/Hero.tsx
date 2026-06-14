@@ -119,7 +119,7 @@ export default function Hero() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
             <img
-              src="/makhana.png"
+              src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/makhana.png"
               alt="Makhana"
               className="w-full h-full object-contain drop-shadow-2xl"
             />

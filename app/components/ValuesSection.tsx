@@ -44,7 +44,7 @@ export default function ValuesSection() {
     <section ref={ref} className="py-28 md:py-40 bg-green overflow-hidden relative">
       {/* Sticker — fruit gel */}
       <ScrollFlipSticker
-        src="/sticker_fruit_gel.png"
+        src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/sticker_fruit_gel.png"
         alt="fruit gel sticker"
         size={240}
         position={{ top: '10%', left: '1.5rem' }}
