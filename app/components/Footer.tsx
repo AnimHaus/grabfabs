@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Footer() {
   const productLinks = [
@@ -25,7 +24,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="md:col-span-2">
             <div className="mb-6">
-              <Image
+              <img
                 src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/alter_logo.png"
                 alt="Grabfabs"
                 width={250}
