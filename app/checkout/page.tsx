@@ -164,7 +164,7 @@ export default function CheckoutPage() {
                   </div>
                 </fieldset>
 
-                <button type="submit" className="w-full bg-green text-cream font-heading font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-full hover:bg-green-mid transition-colors" style={{ fontFamily: 'var(--font-syne)' }}>
+                <button type="submit" className="w-full cursor-pointer bg-green text-cream font-heading font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-full hover:bg-green-mid transition-colors" style={{ fontFamily: 'var(--font-syne)' }}>
                   Continue to Confirm →
                 </button>
               </form>
@@ -190,12 +190,12 @@ export default function CheckoutPage() {
                 <button
                   onClick={placeOrder}
                   disabled={loading || items.length === 0}
-                  className="w-full bg-amber text-cream font-heading font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-full hover:opacity-90 transition-opacity disabled:opacity-60"
+                  className="w-full bg-amber text-cream cursor-pointer font-heading font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-full hover:opacity-90 transition-opacity disabled:opacity-60"
                   style={{ fontFamily: 'var(--font-syne)' }}
                 >
                   {loading ? 'Placing Order…' : 'Place Order ✓'}
                 </button>
-                <button onClick={() => setStep('details')} className="w-full text-center text-dark/50 text-sm tracking-widest uppercase hover:text-green transition-colors" style={{ fontFamily: 'var(--font-syne)' }}>
+                <button onClick={() => setStep('details')} className="w-full text-center cursor-pointer text-dark/50 text-sm tracking-widest uppercase hover:text-green transition-colors" style={{ fontFamily: 'var(--font-syne)' }}>
                   ← Back to Details
                 </button>
               </div>

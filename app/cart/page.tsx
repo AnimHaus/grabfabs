@@ -1,5 +1,5 @@
 'use client';
-
+import TransitionLink from '../components/TransitionLink';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faPlus, faMinus, faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -112,13 +112,13 @@ export default function CartPage() {
               >
                 Proceed to Checkout →
               </Link>
-              <Link
+              <TransitionLink
                 href="/products"
                 className="w-full text-center text-dark/50 text-sm tracking-widest uppercase hover:text-green transition-colors"
                 style={{ fontFamily: 'var(--font-syne)' }}
               >
                 Continue Shopping
-              </Link>
+              </TransitionLink>
             </div>
           </>
         )}

@@ -15,6 +15,7 @@ export default function Hero() {
   const leftX = useTransform(scrollYProgress, [0, 1], ['0%', '-10%']);
   const rightX = useTransform(scrollYProgress, [0, 1], ['0%', '10%']);
   const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '18%']);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [0.95, 0.7]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const tagY = useTransform(scrollYProgress, [0, 1], ['0%', '-20%']);
 
@@ -117,6 +118,7 @@ export default function Hero() {
             className="relative w-full h-full flex items-center justify-center"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
+            style={{ scale: imageScale }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
             <Image

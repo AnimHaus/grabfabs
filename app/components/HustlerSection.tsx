@@ -104,7 +104,7 @@ export default function HustlerSection() {
         </div>
 
         {/* Hustler cards grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {hustlers.map((h, i) => {
             // eslint-disable-next-line react-hooks/rules-of-hooks
             const cardRef = useReveal(`reveal-delay-${(i % 4) + 1}`);
