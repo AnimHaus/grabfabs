@@ -48,9 +48,9 @@ export default function ValuesSection() {
         alt="fruit gel sticker"
         size={240}
         position={{ top: '10%', left: '1.5rem' }}
-        
         rotate={10}
         offset={['30% end', 'end 60%']}
+        className="hidden md:block"
       />
       {/* Huge ghost text */}
       <div

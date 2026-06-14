@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { useCart } from '../lib/cartContext';
@@ -23,9 +24,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <TransitionLink href="/" className="flex items-center group">
-          <img
+          <Image
             src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/logo.png"
             alt="Grabfabs"
+            width={160}
+            height={56}
+            priority
             className="h-14 w-auto object-contain"
           />
           </TransitionLink>

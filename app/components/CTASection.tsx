@@ -23,9 +23,9 @@ export default function CTASection() {
         alt="bar sticker"
         size={240}
         position={{ top: '30%', left: '10rem', transform: 'translateY(-50%)' }}
-        
         rotate={-14}
         offset={['start end', 'center 60%']}
+        className="hidden md:block"
       />
       {/* Sticker — loaves */}
       <ScrollFlipSticker
@@ -33,9 +33,9 @@ export default function CTASection() {
         alt="loaves sticker"
         size={240}
         position={{ top: '50%', right: '10rem', transform: 'translateY(-50%)' }}
-        
         rotate={14}
         offset={['start end', 'center 60%']}
+        className="hidden md:block"
       />
       <motion.div
         style={{

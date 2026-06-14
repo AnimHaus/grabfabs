@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import TransitionLink from './TransitionLink';
 import { products } from '../lib/products';
 import useReveal from './useReveal';
@@ -20,10 +21,12 @@ function FeaturedCard({ product }: { product: (typeof products)[0] }) {
         style={{ minHeight: '520px', display: 'block' }}
       >
       {/* Full-bleed image */}
-      <img
-        src={`${product.heroImage.split('?')[0]}?w=1200&h=700&fit=crop&q=85`}
+      <Image
+        src={product.heroImage.split('?')[0]}
         alt={product.name}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        fill
+        className="object-cover transition-transform duration-700 group-hover:scale-105"
+        sizes="(min-width: 1024px) 66vw, 100vw"
       />
       {/* Gradient overlay */}
       <div
@@ -90,11 +93,13 @@ function ProductCard({ product, index, wide, tall }: { product: (typeof products
       >
       {/* Bold image — top 55% */}
       <div className="relative overflow-hidden" style={{ height: '55%', minHeight: '260px' }}>
-        <img
-          src={`${product.heroImage.split('?')[0]}?w=700&h=500&fit=crop&q=85`}
+        <Image
+          src={product.heroImage.split('?')[0]}
           alt={product.name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-108"
           style={{ transform: 'scale(1.02)' }}
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
         />
         {/* Bottom fade into card color */}
         <div
@@ -160,9 +165,9 @@ export default function ProductsSection() {
         alt="museli sticker"
         size={240}
         position={{ top: '8%', right: '7.5rem' }}
-        
         rotate={8}
         offset={['start end', 'center 60%']}
+        className="hidden md:block"
       />
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section header */}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import TransitionLink from './TransitionLink';
 
@@ -118,10 +119,13 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
-            <img
+            <Image
               src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/makhana.webp"
               alt="Makhana"
-              className="w-full h-full object-contain drop-shadow-2xl"
+              fill
+              priority
+              className="object-contain drop-shadow-2xl"
+              sizes="(min-width: 1024px) 780px, (min-width: 768px) 620px, (min-width: 640px) 500px, 260px"
             />
           </motion.div>
         </div>

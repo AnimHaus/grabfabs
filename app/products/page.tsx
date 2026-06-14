@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import TransitionLink from '../components/TransitionLink';
 import { products } from '../lib/products';
 
@@ -59,10 +60,14 @@ export default function ProductsPage() {
               >
                 {/* Image panel */}
                 <div className="relative overflow-hidden min-h-[55vw] md:min-h-0">
-                  <img
-                    src={product.heroImage}
+                  <Image
+                    src={product.heroImage.split('?')[0]}
                     alt={product.name}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                    priority={i === 0}
                   />
                   {/* subtle dark overlay on hover */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />

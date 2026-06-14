@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import useReveal from './useReveal';
 import WordReveal from './WordReveal';
 import ScrollFlipSticker from './ScrollFlipSticker';
@@ -59,9 +60,9 @@ export default function HustlerSection() {
         alt="peanut butter sticker"
         size={240}
         position={{ top: '10%', right: '7.5rem' }}
-        
         rotate={10}
         offset={['start end', 'center 60%']}
+        className="hidden md:block"
       />
       {/* Sticker — snowballs */}
       <ScrollFlipSticker
@@ -69,9 +70,9 @@ export default function HustlerSection() {
         alt="snowballs sticker"
         size={240}
         position={{ bottom: '4%', left: '1rem' }}
-        
         rotate={20}
         offset={['20% end', 'end 60%']}
+        className="hidden md:block"
       />
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
@@ -114,9 +115,11 @@ export default function HustlerSection() {
                 className="reveal group bg-cream border border-green/10 rounded-2xl p-6 hover:bg-green hover:border-transparent transition-all duration-400 cursor-default"
               >
                 <div className="mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <img
+                  <Image
                     src={h.icon}
                     alt={h.role}
+                    width={40}
+                    height={40}
                     className="w-10 h-10 rounded-xl object-cover"
                   />
                 </div>

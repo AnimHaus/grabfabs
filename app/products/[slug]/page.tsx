@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { products, getProductBySlug } from '../../lib/products';
 import AddToCart from '../../components/AddToCart';
 import TransitionLink from '../../components/TransitionLink';
@@ -34,10 +35,13 @@ export default async function ProductDetailPage({
     <main className="bg-cream min-h-screen">
       {/* ── Full-bleed hero image ─────────────────────────── */}
       <div className="relative h-[85vh] overflow-hidden">
-        <img
-          src={product.heroImage}
+        <Image
+          src={product.heroImage.split('?')[0]}
           alt={product.name}
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
         />
 
         {/* Dark gradient overlay — bottom */}
@@ -149,10 +153,12 @@ export default async function ProductDetailPage({
 
             {/* Bold product image — square */}
             <div className="relative rounded-3xl overflow-hidden aspect-square w-full max-w-xs">
-              <img
-                src={`${product.heroImage.split('?')[0]}?w=600&h=600&fit=crop&q=90`}
+              <Image
+                src={product.heroImage.split('?')[0]}
                 alt={product.name}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 320px, 100vw"
               />
             </div>
           </div>

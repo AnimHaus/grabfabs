@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import useReveal from './useReveal';
@@ -63,10 +64,12 @@ export default function AwakynnSection() {
         style={{ y: imageY }}
         className="absolute inset-0 scale-110"
       >
-        <img
-          src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1800&h=1200&fit=crop&q=85"
+        <Image
+          src="https://pub-9f1519d31cf2482ba68512fc7582919d.r2.dev/awakynn_teaser.jpeg"
           alt="Yoga and wellness"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          sizes="100vw"
         />
       </motion.div>
 

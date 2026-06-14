@@ -41,6 +41,33 @@ export default function PageTransitionProvider({ children }: { children: ReactNo
   const layerControls = [useAnimation(), useAnimation(), useAnimation()];
   const pendingHref = useRef<string | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [initialLoad, setInitialLoad] = useState(true);
+
+  // On initial page load, cover screen immediately then slide out after window load
+  useEffect(() => {
+    layerControls.forEach((ctrl) => ctrl.set({ y: "0%" }));
+
+    const slideOutInitial = async () => {
+      await Promise.all(
+        [...layerControls].reverse().map((ctrl, i) =>
+          ctrl.start({
+            y: "-100%",
+            transition: { duration: DURATION, ease: EASE, delay: i * STAGGER },
+          })
+        )
+      );
+      setInitialLoad(false);
+      layerControls.forEach((ctrl) => ctrl.set({ y: "100%" }));
+    };
+
+    if (document.readyState === "complete") {
+      slideOutInitial();
+    } else {
+      window.addEventListener("load", slideOutInitial, { once: true });
+      return () => window.removeEventListener("load", slideOutInitial);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // After new page mounts, slide all layers back down (staggered, reverse order)
   useEffect(() => {
@@ -93,7 +120,7 @@ export default function PageTransitionProvider({ children }: { children: ReactNo
       {LAYERS.map((color, i) => (
         <motion.div
           key={color}
-          initial={{ y: "100%" }}
+          initial={{ y: "0%" }}
           animate={layerControls[i]}
           aria-hidden="true"
           className="fixed pointer-events-none"

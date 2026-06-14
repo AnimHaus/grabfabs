@@ -44,9 +44,9 @@ export default function AboutSection() {
         alt="makhana sticker"
         size={240}
         position={{ top: '10%', right: '42rem' }}
-        
         rotate={-10}
         offset={['start end', 'center 60%']}
+        className="hidden md:block"
       />
 
       {/* Large decorative text */}
