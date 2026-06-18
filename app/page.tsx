@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <ProductsSection />
       <MarqueeStrip variant="dark" />
       <AboutSection />
       <MarqueeStrip variant="amber" />
-      <ProductsSection />
       <HustlerSection />
       <MarqueeStrip variant="light" />
       <ValuesSection />
