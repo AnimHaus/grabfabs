@@ -103,12 +103,6 @@ export default function ValuesSection() {
                 >
                   {/* Number + title */}
                   <div className={`flex flex-col justify-center ${isEven ? 'md:pr-16' : 'md:pl-16'}`}>
-                    <span
-                      className="font-display text-amber/30 text-8xl leading-none mb-4 block"
-                      style={{ fontFamily: 'var(--font-anton)' }}
-                    >
-                      {v.number}
-                    </span>
                     <h3
                       className="font-display text-cream"
                       style={{

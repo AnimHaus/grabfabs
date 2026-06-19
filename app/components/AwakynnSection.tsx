@@ -96,14 +96,6 @@ export default function AwakynnSection() {
 
         {/* Header */}
         <div className="mb-20 md:mb-28">
-          <p
-            ref={subRef}
-            className="reveal text-[#7ecf7e] tracking-[0.35em] text-xs uppercase font-bold mb-6"
-            style={{ fontFamily: 'var(--font-syne)' }}
-          >
-            A Sister Brand
-          </p>
-
           <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-20">
             <h2
               className="leading-[0.85] flex-shrink-0"
@@ -113,11 +105,7 @@ export default function AwakynnSection() {
                 color: '#f0efe8',
               }}
             >
-              <WordReveal text="AWAK" />
-              <br />
-              <span style={{ WebkitTextStroke: '2px #7ecf7e', color: 'transparent' }}>
-                <WordReveal text="YNN" delay={0.08} />
-              </span>
+              <WordReveal text="AWAK" /><span style={{ WebkitTextStroke: '2px #7ecf7e', color: 'transparent' }}><WordReveal text="YNN" delay={0.08} /></span>
             </h2>
 
             <div className="pb-2 max-w-md">

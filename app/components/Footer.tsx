@@ -14,7 +14,10 @@ export default function Footer() {
   ];
   const companyLinks = ['About', 'Our Story', 'For Hustlers', 'Contact'];
   const awakynnLinks = ['Yoga & Pranayama', 'Meditation', 'Ayurvedic Diet', 'Mantra Chanting', 'Clarity Sessions'];
-  const connectLinks = ['Instagram', 'LinkedIn', 'Twitter / X'];
+  const connectLinks = [
+    { label: 'Instagram', href: 'https://www.instagram.com/awakynn.yoga' },
+    { label: 'YouTube', href: 'https://www.youtube.com/@awakynn.yogaofficial' },
+  ];
 
   return (
     <footer className="bg-dark text-cream/70">
@@ -146,13 +149,15 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {connectLinks.map((item) => (
-                <li key={item}>
+                <li key={item.label}>
                   <a
-                    href="#"
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-cream/45 hover:text-amber text-sm transition-colors duration-200"
                     style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}
