@@ -27,9 +27,23 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Grabfabs — Goodness. Grabbed. Fabulous.",
+  metadataBase: new URL("https://grabfabs.in"),
+  title: {
+    default: "Grabfabs — Feel Good, On the Go Foods",
+    template: "%s | Grabfabs",
+  },
   description:
     "Grabfabs brings you Feel Good, On the Go foods for hustlers. Smart nutrition without the junk — muesli, peanut butter, energy bites, gluten-free bread, makhana and more.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
