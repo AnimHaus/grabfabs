@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     'clean food India',
     'no junk snacks India',
   ],
-  alternates: { canonical: 'https://grabfabs.in/products' },
+  alternates: { canonical: 'https://grabfabs.vercel.app/products' },
   openGraph: {
     title: 'Shop Feel Good Foods – Grabfabs',
     description: 'Premium muesli, natural peanut butter, energy bites, gluten-free bread and makhana. Clean ingredients — no junk.',
-    url: 'https://grabfabs.in/products',
-    images: [{ url: 'https://grabfabs.in/og.jpg', width: 1200, height: 630, alt: 'Grabfabs Products' }],
+    url: 'https://grabfabs.vercel.app/products',
+    images: [{ url: 'https://grabfabs.vercel.app/og.jpg', width: 1200, height: 630, alt: 'Grabfabs Products' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Shop Feel Good Foods – Grabfabs',
     description: 'Clean muesli, peanut butter, energy bites, gluten-free bread and makhana. No junk.',
-    images: ['https://grabfabs.in/og.jpg'],
+    images: ['https://grabfabs.vercel.app/og.jpg'],
   },
 };
 

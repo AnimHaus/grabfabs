@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Your Cart',
   description: 'Review your Grabfabs cart — update quantities, remove items, and proceed to checkout. Free shipping on orders over ₹500.',
   robots: { index: false, follow: false },
-  alternates: { canonical: 'https://grabfabs.in/cart' },
+  alternates: { canonical: 'https://grabfabs.vercel.app/cart' },
 };
 
 export default function CartPage() {

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Checkout',
   description: 'Complete your Grabfabs order. Cash on delivery. Free shipping on orders over ₹500.',
   robots: { index: false, follow: false },
-  alternates: { canonical: 'https://grabfabs.in/checkout' },
+  alternates: { canonical: 'https://grabfabs.vercel.app/checkout' },
 };
 
 export default function CheckoutPage() {
